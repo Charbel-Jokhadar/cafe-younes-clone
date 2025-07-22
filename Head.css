@@ -314,13 +314,16 @@ font-weight: 150;
   margin-left: 20px;
   word-spacing:2px;
 }
-
-.left h6 {
+.top{
+   flex-wrap: wrap;
+   row-gap: 1px;
+}
+.top h6 {
   position: relative;
   cursor: pointer;
 }
 
-.left h6::after{
+.top h6::after{
  content: "";
  position: absolute;
  left: 0;
@@ -331,7 +334,7 @@ font-weight: 150;
  transition: width 0.3s ease;
 }
 
-.left h6:hover::after {
+.top h6:hover::after {
   width: 100%;
 }
 .par button {
@@ -354,13 +357,35 @@ font-weight: 150;
 .ffo-c img{
   cursor:pointer;
 }
-/* For tablets and smaller phones */
-@media (max-width: 768px) {
+.menu-icon {
+  display: none !important;
+}
+.side-nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.material-symbols-outlined{
+  cursor: pointer;
+}
+@media (max-width: 770px) {
 
   .all {
     flex-direction: column;
     align-items: flex-start;
     padding: 10px;
+  }
+
+  .left{
+    margin-top: 10px;
   }
 
   .top {
@@ -387,30 +412,58 @@ font-weight: 150;
     padding: 20px;
   }
 
-  .photo1 {
-    padding-bottom: 50px;
-  }
-
+  
   .par {
-    font-size: 20px;
     top: 30%;
   }
 
-  .par1 {
-    font-size: 8px;
+  .top {
+    display: none;
+  }
+
+  .left {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .menu-icon {
+    display: block !important; 
+    cursor: pointer;
+  }
+
+  .logo-size {
+    margin: 0 auto;
+  }
+
+  .right {
+    position: absolute;
+    right: 10px;
+    top: 70px; 
   }
 
   .ffo-c {
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
     gap: 30px;
   }
 
   .ffo-c div {
-    width: 100%;
+    align-items: center;
   }
+
+  .im {
+    width: 80px;
+  }
+    .final {
+    text-align: center;
+  }
+
 }
 
-/* For very small screens like phones (max-width: 480px) */
+
+
+
 @media (max-width: 480px) {
 
   .using-grid {
@@ -455,6 +508,25 @@ font-weight: 150;
 
   .logo-size {
     width: 70px;
+  }
+
+  .ffo-c {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .ffo-c div {
+    align-items: center;
+  }
+
+  .im {
+    width: 70px;
+  }
+
+    .final {
+    font-size: 10px;
+    text-align: center;
   }
 }
 

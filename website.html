@@ -14,7 +14,10 @@
 
       <div class="all"> 
         <div class="left">
-          <img class="logo-size" src="../logos/CY_logo.avif" alt="logo caffe Younes">
+  <span class="material-symbols-outlined menu-icon" onclick="openNav()">menu</span>
+
+  <img class="logo-size" src="../logos/CY_logo.avif" alt="logo caffe Younes">
+</div>
           <div class="top">
           <h6>SHOP</h6>
           <h6> FRANCHISING</h6>
@@ -25,7 +28,6 @@
           <h6>DAILY DOSE EGYPT</h6>
           <h6>WORK WITH US</h6>
           </div>
-        </div>
         <div class="right">
            <span class="material-symbols-outlined">person</span>
            <span class="material-symbols-outlined">search</span>
@@ -161,5 +163,27 @@
 <div class="final">
   <h6>2025- CAFE YOUNES POWERED BY SHOPIFY |CUSTOMIZED BY SPEARHEAD</h6>
 </div>
+
+<div id="sideNav" class="side-nav">
+  <span class="material-symbols-outlined close-btn" onclick="closeNav()">close</span>
+  <h6>SHOP</h6>
+  <h6>FRANCHISING</h6>
+  <h6>LOCATIONS</h6>
+  <h6>OUR STORY</h6>
+  <h6>CONTACT</h6>
+  <h6>BLACKCOFFEE DUBAI</h6>
+  <h6>DAILY DOSE EGYPT</h6>
+  <h6>WORK WITH US</h6>
+</div>
+<script>
+function openNav() {
+  document.getElementById("sideNav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("sideNav").style.width = "0";
+}
+</script>
+
     </body>
   </html> 
